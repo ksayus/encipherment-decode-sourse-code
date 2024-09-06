@@ -71,20 +71,26 @@ int read_inspection_code()
 	}
 
 	int i = 0;
+	lock = 0;
 	//“∆∂Ø¥Û–°
 	while (1)
 	{
+		//cout << lock << endl;
 		if (input[i] == '-')
 		{
 			break;
 		}
 		else {
+			//cout << lock << endl;
 			if (input[i] == '0')
 			{
 				lock = lock * 2;
+				//cout << lock << endl;
 			}
-			else {
+			if (input[i] == '1') 
+			{
 				lock = lock * 2 + 1;
+				//cout << lock << endl;
 			}
 			i++;
 		}
