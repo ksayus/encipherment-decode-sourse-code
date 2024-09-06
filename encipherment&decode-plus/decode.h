@@ -49,6 +49,7 @@ int read_inspection_code()
 {
 	cin >> input;
 
+	read = 0;
 	//用于读取字符串长度
 	while (1) {
 		if (input[24 + read] != '-')
