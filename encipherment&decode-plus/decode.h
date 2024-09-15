@@ -12,42 +12,65 @@ int readmodule = 0;
 int read_inspection = 0;
 int read_inspection_add = 0;
 int inspection_binarysystem = 0;
+int binarysystem_inspection[max_number];
+
 
 char readout[max_number]{};
-char binarysystem_inspection[max_number];
 
-//void inspection_input_deteil()
-//{
-//
-//	//检验输入的文本是否符合标准
-//	while (privacy_key)
-//	{
-//		binarysystem_inspection[inspection_binarysystem] = privacy_key % 2;
-//		privacy_key /= 2;
-//		//cout << binarysystem[n];
-//		inspection_binarysystem++;
-//	}
-//
-//	read_inspection = inspection_binarysystem;
-//
-//	do {
-//		if (input[read_inspection_add] != ' ')
-//		{
-//			read_inspection--;
-//			read_inspection_add++;
-//		}
-//	} while (input[read_inspection_add] != ' ');
-//
-//	if (read_inspection > 0)
-//	{
-//		cout << "输入错误!" << endl;
-//		break_quckily();
-//	}
-//}
+void inspection_input_deteil()
+{
+	cin >> input;
+
+	int i = 0;
+	while (1)
+	{
+		if (input[i] == '-')
+		{
+			break;
+		}
+		if (input[i] == ' ')
+		{
+			cout << "输入错误!" << endl;
+			exit_procedure();
+		}
+		////cout << lock << endl;
+		//if (input[i] == '-')
+		//{
+		//	break;
+		//}
+		//else {
+		//	i++;
+		//}
+		i++;
+	}
+
+	//检验输入的文本是否符合标准
+	//while (privacy_key)
+	//{
+	//	binarysystem_inspection[inspection_binarysystem] = privacy_key % 2;
+	//	privacy_key /= 2;
+	//	//cout << binarysystem[inspection_binarysystem];
+	//	inspection_binarysystem++;
+	//}
+
+	//read_inspection = inspection_binarysystem; 
+
+	/*while(input[read_inspection_add] == ' ')
+	{
+		read_inspection--;
+		read_inspection_add++;
+	}*/
+
+	/*if (i < inspection_binarysystem)
+	{
+		
+		exit_procedure();
+	}*/
+}
 
 int read_inspection_code()
 {
-	cin >> input;
+	//cin >> input;
 
 	read = 0;
 	//用于读取字符串长度

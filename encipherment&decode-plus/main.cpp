@@ -44,7 +44,8 @@ int main()
 			{
 				clear_sceen();
 				cout << "请输入加密后的文本:" << endl;
-				//inspection_input_deteil();
+				inspection_input_deteil();
+				//Sleep(1000);
 				read_inspection_code();
 				if (readmodule == 1)
 				{
